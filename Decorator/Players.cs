@@ -8,11 +8,15 @@ namespace Decorator
     {
         public abstract void Operation();
     }
+
     class ConcreteComponent : Component
     {
         public override void Operation()
-        { }
+        {
+            Console.WriteLine("ConcreteComponent");
+        }
     }
+
     abstract class Decorator : Component
     {
         protected Component component;
@@ -32,6 +36,7 @@ namespace Decorator
     {
         public override void Operation()
         {
+            Console.WriteLine("ConcreteDecoratorA");
             base.Operation();
         }
     }
@@ -39,6 +44,8 @@ namespace Decorator
     {
         public override void Operation()
         {
+            Console.WriteLine("ConcreteDecoratorB");
+
             base.Operation();
         }
     }
