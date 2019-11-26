@@ -27,7 +27,9 @@ namespace Decorator
 
             decoratorForIRepo.GetId();
 
+            Console.WriteLine("-----------------------------");
 
+            new CofeeHelper().ShouldSupportCondiments();
         }
     }
 }
