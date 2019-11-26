@@ -30,6 +30,18 @@ namespace Decorator
             Console.WriteLine("-----------------------------");
 
             new CofeeHelper().ShouldSupportCondiments();
+
+
+            Console.WriteLine("-----------------------------");
+
+
+            BaseCar baseCar = new BaseCar();
+            Console.WriteLine(baseCar.GetCarCharacteristic());
+            Console.WriteLine(baseCar.GetCost());
+
+            ICarSet superCar = new AutomaticTransmissionSet(baseCar);
+            Console.WriteLine(superCar.GetCarCharacteristic());
+            Console.WriteLine(superCar.GetCost());
         }
     }
 }
