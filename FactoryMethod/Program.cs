@@ -12,6 +12,12 @@ namespace FactoryMethod
             dev = new WoodDeveloper("Частный застройщик");
             House house = dev.Create();
 
+            CarsFactory ferraryFactory = new FerraryFactory("FerraryFactory");
+            ferraryFactory.CreateCar();
+
+            CarsFactory lamborginyFactory = new LamborginyFactory("LamborginyFactory");
+            lamborginyFactory.CreateCar();
+
             Console.ReadLine();
         }
     }    
